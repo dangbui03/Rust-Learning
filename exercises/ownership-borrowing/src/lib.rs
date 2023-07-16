@@ -5,6 +5,7 @@ fn exercise1() {
     let x = String::from("hello, world");
     let y = x.clone();
     let z = &x;
+    println!("z: {}", *z);
 }
 
 // Exercise 2
@@ -36,18 +37,19 @@ fn exercise3() {
 
     let additions: Vec<usize> = vec![0];
 
-    let a = additions.clone();
-    let haha = a.len();
+    //let a = additions.clone();
+    //let haha = a.len();
 
     println!("{:?}", values_number);
 
-    while haha > 0 {
-        let additions: Vec<usize> = vec![0];
+    while additions.len() > 0 {//haha > 0 {
+        //let additions: Vec<usize> = vec![0];
         let mut addition: f64 = 0.0;
 
         // Sumar valores en additions
-        for element_index in additions {
-            let addition_aux = values[element_index];
+        //iter, into_iter(), iter_mut()
+        for element_index in additions.iter() {// sau mỗi vòng for thì additions sẽ mất đi
+            let addition_aux = values[*element_index];
             addition = addition_aux + addition;
         }
     }
@@ -57,7 +59,7 @@ fn exercise3() {
 // Make it compile
 fn exercise4(value: u32) -> String {
     let str_value = value.to_string(); // Convert u32 to String
-                                       //let str_ref = &str_value; // Obtain a reference to the String
+    //let str_ref = &str_value; // Obtain a reference to the String
     str_value // Return the reference to the String
 }
 
