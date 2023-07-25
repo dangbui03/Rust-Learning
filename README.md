@@ -1,4 +1,7 @@
-# Lesson 4
+<HTML>
+  # Lesson 4
 
-Trait, Generic type, Generic Trait
-return Trait
+  <p>Trait, Generic type, Generic Trait. </p> 
+  <p>Return Trait.</p>
+</HTML>
+
